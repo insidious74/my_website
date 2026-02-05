@@ -49,17 +49,10 @@ function previewImage(event) {
 }
 ```
 ---
-📌 Usage
+##Usage
 
-Clone the repository:
+Clone the repository:git clone https://github.com/yourusername/my-business-website.git
 
-git clone https://github.com/yourusername/my-business-website.git
-
-
-Navigate to the folder:
-
-cd my-business-website
-
-
-Open index.html in a browser to view the website locally.
-
+---
+##Acknowledgment
+Thanks to all contributors and open-source comunity for thier support!
