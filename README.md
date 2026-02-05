@@ -49,10 +49,10 @@ function previewImage(event) {
 }
 ```
 ---
-##Usage
+## Usage
 
 Clone the repository:git clone https://github.com/yourusername/my-business-website.git
 
 ---
-##Acknowledgment
+## Acknowledgment
 Thanks to all contributors and open-source comunity for thier support!
