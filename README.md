@@ -51,7 +51,7 @@ function previewImage(event) {
 ---
 ## Usage
 
-Clone the repository:git clone https://github.com/insidious74/my-business-website.git
+Clone the repository:git clone https://github.com/insidious74/my_website.git
 
 ---
 ## Acknowledgment
