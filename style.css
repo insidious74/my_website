@@ -1,0 +1,270 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+  --bg-main: #e0f4ff;
+  --bg-alt: rgba(255, 255, 255, 0.85);
+  --text-dark: #111111;
+  --text-light: #555555;
+  --accent: #1e90ff;
+  --shadow: rgba(0,0,0,0.08);
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Gradient Background */
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background: linear-gradient(135deg, #0f0f0f, #1e90ff, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientMove 25s ease infinite;
+  overflow-x: hidden;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Floating Shapes */
+.animated-bg {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.animated-bg span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  animation: float 40s infinite ease-in-out;
+}
+
+.animated-bg span:nth-child(1) {
+  width: 400px; height: 400px;
+  top: 5%; left: 10%;
+  background: rgba(30, 144, 255, 0.08);
+  animation-duration: 38s;
+}
+
+.animated-bg span:nth-child(2) {
+  width: 300px; height: 300px;
+  top: 60%; left: 15%;
+  background: rgba(255, 255, 255, 0.06);
+  animation-duration: 45s;
+}
+
+.animated-bg span:nth-child(3) {
+  width: 500px; height: 500px;
+  top: 20%; left: 70%;
+  background: rgba(0, 0, 0, 0.05);
+  animation-duration: 50s;
+}
+
+.animated-bg span:nth-child(4) {
+  width: 350px; height: 350px;
+  top: 75%; left: 50%;
+  background: rgba(30, 144, 255, 0.07);
+  animation-duration: 42s;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(60px, -80px) rotate(45deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0; width: 100%;
+  padding: 20px 80px;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px var(--shadow);
+  z-index: 100;
+  font-family: 'Inter', sans-serif;
+}
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.nav-cta {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  padding: 140px 20px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero p {
+  font-family: 'Inter', sans-serif;
+  color: #e0e0e0;
+  font-size: 18px;
+  max-width: 650px;
+  margin: 0 auto 40px;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  padding: 16px 40px;
+  border-radius: 40px;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+/* Sections */
+.section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 100px 80px;
+  text-align: center;
+  background: var(--bg-alt);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.section.alt {
+  background: rgba(240, 248, 255, 0.9);
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.section-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+/* Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px var(--shadow);
+}
+
+.card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Why Choose Us */
+.why-list {
+  list-style: none;
+  max-width: 520px;
+  margin: 40px auto 0;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+}
+
+/* Testimonial */
+.testimonial {
+  max-width: 700px;
+  margin: auto;
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+}
+
+/* Contact */
+.contact form {
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  padding: 14px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  padding: 40px;
+  text-align: center;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar { padding: 20px; }
+  nav a { margin-left: 15px; font-size: 15px; }
+  .hero h1 { font-size: 44px; }
+  .section { padding: 60px 25px; }
+  .section h2 { font-size: 32px; }
+}
